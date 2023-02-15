@@ -55,7 +55,7 @@ module.exports = {
   },
 
   // Delete to remove thought by id
-  deleteStudent(req, res) {
+  deleteThought(req, res) {
     Thought.findOneAndDelete({ _id: req.params.thoughtId })
       .then((thought) => 
         !thought
