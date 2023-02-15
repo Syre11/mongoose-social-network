@@ -59,11 +59,31 @@ module.exports = {
 
   // Post to add new friend to user's friend list
   addFriend(req, res) {
-    
+    User.findOneAndUpdate(
+      { _id: req.params.userId },
+      { $addToSet: { friends: params.friendId } },
+      { runValidators: true, new: true }
+    )
+      .then((user) =>
+        !user
+          ? res.status(404).json({ message: 'No users found with that ID' })
+          : res.json(user)
+      )
+      .catch((err) => res.status(500).json(err));
   },
 
   // Delete to remove friend from user's friend list
   removeFriend(req, res) {
-    
+    User.findOneAndUpdate(
+      { _id: req.params.userId },
+      { $pull: {friends: { friendId: req.params.friendId}} },
+      { runValidators: true, new: true }
+    )
+      .then((student) =>
+        !user
+          ? res.status(404).json({ message: 'No users found with that ID' })
+          : res.json(user)
+      )
+      .catch((err) => res.status(500).json(err));
   },
 };
