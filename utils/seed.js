@@ -11,69 +11,69 @@ connection.once('open', async () => {
 
   const users = [
     {
-      username: 'Mordecool',
-      email: 'mordecool@email.com',
+      username: 'TestUser1',
+      email: 'TestUser1@email.com',
     },
     {
-      username: 'Rigbone',
-      email: 'trashboat@email.com',
+      username: 'TestUser2',
+      email: 'TestUser2@email.com',
     },
     {
-      username: 'Loli_Pops',
-      email: 'pops@email.com',
+      username: 'TestUser3',
+      email: 'TestUser3@email.com',
     },
     {
-      username: 'Skips',
-      email: 'usedtobewalks@email.com',
+      username: 'TestUser4',
+      email: 'TestUser4@email.com',
     },
     {
-      username: 'MuscleMan',
-      email: 'mitch@email.com',
+      username: 'TestUser5',
+      email: 'TestUser5@email.com',
     }
   ];
   const thoughts = [
     {
-      thoughtText: 'First test thought, this is a test of the first thought',
-      username: 'Rigbone',
+      thoughtText: 'Test thought 1',
+      username: 'TestUser3',
       reactions: [ 
         {
-          reactionBody: 'This test might have worked, I am testing reactions here',
-          username: 'MuscleMan'
+          reactionBody: 'Test reaction 1',
+          username: 'TestUser1'
         },
         { 
-          reactionBody: 'did the test work?',
-          username: 'Loli_Pops'
+          reactionBody: 'Test reaction 2',
+          username: 'TestUser2'
         } 
       ]
     },
     {
-      thoughtText: 'I wonder if I should change my name to trash boat',
-      username: 'Rigbone',
+      thoughtText: 'Test thought 2',
+      username: 'TestUser1',
       reactions: [  
         {
-        reactionBody: 'You definitely should not, that is embarassing',
-        username: 'Skips'
+        reactionBody: 'Test reaction 3',
+        username: 'TestUser3'
         }
       ]
     },
     {
-      thoughtText: 'Margaret is the best, its too bad I always screw things up',
-      username: 'Mordecool',
+      thoughtText: 'Test thought 3',
+      username: 'TestUser4',
       reactions: []
     },
     {
-      thoughtText: 'I think lolipops are acceptable forms of currency',
-      username: 'Loli_Pops',
+      thoughtText: 'Test thought 4',
+      username: 'TestUser1',
       reactions: [        
         {
-        reactionBody: 'Pops... you are ridiculous',
-        username: 'Mordecool'
+        reactionBody: 'Test reaction 4',
+        username: 'TestUser5'
         }
       ]
     },
     {
-      thoughtText: 'WHOOOOOO, you know who else is a first thought test? MY MOM!!!',
-      username: 'MuscleMan',
+      thoughtText: 'Test thought 5',
+      username: 'TestUser3',
       reactions: []
     },
   ];
