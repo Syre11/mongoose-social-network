@@ -27,12 +27,12 @@ module.exports = {
       .then((thought) => {
         return User.findOneAndUpdate(
           { _id: req.body.userId },
-          { $addToSet: { thoughts: thought._id }},
+          { $push: { thoughts: thought._id }},
           { new: true }
         );
       })
-      .then((user) =>
-        !user
+      .then((thought) =>
+        !thought
           ? res.staus(404).json({ message: 'Thought created, but no user found with that ID'})
           : res.json('Thought created successfully!')
       )
@@ -84,7 +84,7 @@ module.exports = {
   removeReaction(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
-      { $pull: {reactions: { reactionId: req.params.reactionId}} },
+      { $pull: {reactions: req.params.reactionId} },
       { new: true }
     )
       .then((thought) =>
